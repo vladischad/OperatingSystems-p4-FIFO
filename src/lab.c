@@ -104,12 +104,6 @@ bool is_empty(queue_t q) {
     return empty;
 }
 
-// Returns true if the queue is full
-bool is_full(queue_t q) {
-    if (!q) return false;
-    return q->size == q->capacity;
-}
-
 // Checks if the queue has been shutdown
 bool is_shutdown(queue_t q) {
     pthread_mutex_lock(&q->lock);
